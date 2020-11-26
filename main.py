@@ -51,14 +51,11 @@ class Example(QMainWindow, Ui_MainWindow):
             painter.begin(self)
             self.draw(painter)
             painter.end()
-
     def draw(self, qp):
-        for i in range(rand.randint(1, 7)):
-            r, g, b = rand.randint(0, 255), rand.randint(0, 255),\
-                               rand.randint(0, 255)
-            qp.setBrush(QColor(r, g, b))
+        qp.setBrush(QColor(255, 255, 0))
+        for i in range(rand.randint(2, 5)):
             size = rand.randint(10, 100)
-            x, y = rand.randint(50, 420), rand.randint(160, 380)
+            x, y = rand.randint(50, 470), rand.randint(160, 380)
             qp.drawEllipse(x, y, size, size)
 
 
